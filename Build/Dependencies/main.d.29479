@@ -1,0 +1,3 @@
+main.o: ../Code/Src/main.cpp ../Code/Hdr/main.h ../Code/Hdr/human.h \
+ ../Code/Hdr/common.h ../Code/Hdr/human_female.h ../Code/Hdr/human.h \
+ ../Code/Hdr/idSystem.h

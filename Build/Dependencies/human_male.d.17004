@@ -1,0 +1,2 @@
+human_male.o: ../Code/Src/Human/human_male.cpp ../Code/Hdr/human_male.h \
+ ../Code/Hdr/human.h ../Code/Hdr/common.h

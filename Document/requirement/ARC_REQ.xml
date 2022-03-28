@@ -1,0 +1,48 @@
+<ARCR>
+	<introduction>
+	 This is architecture requirements for human design
+	</introduction>
+	<human>
+		<req id="arc_1">
+		    Human race comprises 3 classes: human, male, female
+		</req>
+		<req id="arc_2">
+		    human is super class
+		</req>
+		<req id="arc_3">
+		    male class inherits from human class
+		</req>
+		<req id="arc_4">
+		    female class inherits from human class
+		</req>
+	</human>
+	<Human_class>
+		<Bio>
+			<req id="arc_5">
+			    contain basic biological info for human
+			</req>
+			
+			<req id="arc_7">
+			    contains interfaces to get those info
+			</req>
+			<req id="arc_10">
+			    Getter and setter of biological info cannot be overridden by
+			    children class
+			</req>
+			<req id="arc_12">
+			    Bio includes intelligence
+			</req>
+			<req id="arc_13">
+			    Bio includes strength
+			</req>
+		</Bio>
+		<Action>
+			<req id="arc_8">
+			    contains basic actions for human
+			</req>
+			<req id="arc_9">
+			    All actions can be overridden by children classes
+			</req>
+		<req id="arc_6">Human can walk</Action>
+	</Female_class>
+</ARCR>

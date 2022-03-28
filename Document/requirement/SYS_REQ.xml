@@ -1,0 +1,111 @@
+﻿<SYSR>
+	<Introduction>
+ 		This is system requirement for human implementation
+	</Introduction>
+	<Races>
+		<Human>
+			<intro>
+				an average rage with no advantage besides high birth rate 
+			</intro>
+			<Genders>	
+				<Male>
+					<req id="sys_1">
+						Strong muscles, average intelligence
+					</req>
+					<req id="sys_2">
+						being born with male name
+					</req>
+					<req id="sys_3">
+					    chance of being born: 50%
+					</req>
+				</Male>
+				<Female>
+					<req id="sys_4">
+						average musle strength, high intelligence
+					</req>
+					<req id="sys_5">
+						being born with female name
+					</req>
+					<req id="sys_6">
+					    chance of being born: 50%
+					</req>
+				</Female>
+			</Genders>
+			<Action>
+				<intro>
+					actions a human can do
+				</intro>
+				<common>
+					<req id="sys_7">
+						human introduce self
+					</req>
+					<req id="sys_8">
+						human can take bath
+					</req>
+					<req id="sys_9">
+						human can work
+					</req>
+					<req id="sys_10">human can have job</req>
+					<req id="sys_11">human can die</req>
+					<req id="sys_12">
+						human can marry
+					</req>
+				</common>
+				<Male>
+					<req id="sys_13">Male cannot give birth</req>
+				</Male>
+				<Female>
+					<req id="sys_14">Female cannot give seed</req>
+				</Female>
+				</Action>
+			<biology>
+				<life_expectancy>
+					<req id="sys_15">
+						Human age increase 1 per standard year
+					</req>
+					<req id="sys_16">
+						Human maximum age is 120
+					</req>
+					<req id="sys_17">
+						Human maximum age is 120
+					</req>
+				</life_expectancy>
+				<health>
+					<req id="sys_18">
+						Human maximum HP is 100
+					</req>
+					<req id="sys_19">
+						Male has higher HP than female
+					</req>				
+				</health>
+			</biology>
+			<Society>
+				<req id="sys_20">
+					Humans can have same name
+				</req>
+				<req id="sys_21">
+					Each human have a distinguished ID 
+				</req>
+			</Society>
+		</Human>
+		<Elf>
+		</Elf>
+		<Ork>
+		</Ork>
+	</Races>
+	<Environment>
+		<timeline>
+			<req id="sys_22">
+				each 2 seconds, 1 year pass 
+			</req>
+			<req id="sys_23">
+				time line start at year 0 
+			</req>
+		</timeline>
+		<ID_system>
+			<req id="sys_24">
+				Each creature has a unique ID
+			</req>
+		</ID_system>
+	</Environment>
+</SYSR>

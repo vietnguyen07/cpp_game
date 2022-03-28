@@ -13,7 +13,7 @@
 
 using namespace std;
 
-enum human_gender
+enum class human_gender
 {
 	none,
 	male,
@@ -23,20 +23,42 @@ enum human_gender
 class human
 {
 	public:
-		human(string p_name, unsigned int p_age);
+
+		virtual ~human();
 		virtual void walk();
 		virtual void introduce();
-		human * operator +(const human * p_human);
-		virtual uint_32 get_age();
-		virtual uint_32 get_hp();
-		virtual uint_32 get_level();
+		virtual void fuck(human &p_partner);
+
+		// Getters
+		virtual string get_name() final;
+		virtual uint_32 get_age() final;
+		virtual uint_32 get_hp() final;
+		virtual uint_32 get_level() final;
+		virtual human_gender get_gender() final;
+		virtual bool is_pregnant();
+
+		// Setters
+		virtual bool set_name(string p_name) final;
+		virtual bool set_age(uint_32 p_age) final;
+		virtual bool set_hp(uint_32 p_hp) final;
+		virtual bool set_level(uint_32 p_level) final;
+		virtual bool set_gender(human_gender p_gender) final;
+
+
+	protected:
+		// this class is not meant
+		// to be created directly
+		human(string p_name, unsigned int p_age);
 
 	private:
 		string name="none";
 		uint_32 age=0;
 		uint_32 hp=1;
 		uint_32 level=1;
-		human_gender gender = none;
+		unsigned long long id;
+		bool pregnant= false;
+		human_gender gender = human_gender::none;
+		virtual void set_pregnant(bool p_pregnant) final;
 };
 
 

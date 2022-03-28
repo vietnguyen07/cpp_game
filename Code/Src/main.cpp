@@ -7,26 +7,29 @@
 
 #include "main.h"
 #include "human.h"
+#include "human_female.h"
 #include <vector>
+#include "idSystem.h"
+#include <chrono>
+#include <thread>
+#include "iostream"
 
 int main()
 {
 	std::vector <human*> human_lst;
-	std::string human_name;
+	human_female * first_fm = new human_female("Lilith",0);
+	human_female * second_fm = new human_female("Eva",0);
+	human_lst.push_back(first_fm);
+	human_lst.push_back(second_fm);
 
-	for(unsigned int i=0; i < 10; i++)
+	for(auto person:human_lst)
 	{
-		human_name = "human_" + std::to_string(i);
-		human_lst.push_back(new human(human_name,0));
+		person->introduce();
+		std::this_thread::sleep_for(chrono::milliseconds(1000));
 	}
 
-//	for(human * person:human_lst)
-//	{
-//		person->introduce();
-//	}
 
-	human * combine = *human_lst[0] + human_lst[1];
-	combine->introduce();
+
 
 	return 0;
 }
