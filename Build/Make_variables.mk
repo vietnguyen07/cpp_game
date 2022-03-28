@@ -48,6 +48,7 @@ DEP_LST:=$(SRC:%.c=$(DEP_FOLDER)/%.d)
 
 NEEDED_FOLDER:= $(OBJ_FOLDER) $(DEP_FOLDER)
 
+#Compiler variables
 CC:=g++
 OTIMIZATION:=-O0 -Wl
 GDBDEBUG:= -g3 -ggdb
@@ -56,6 +57,7 @@ CFLAGS+=$(OPTIMIZATION) $(GDBDEBUG) -std=c++14
 
 DEPFLAGS+=$(foreach header_dir,$(INC_FOLDER),-I$(header_dir) ) -MM
 
+# Linker variables
 LKER:=g++
 LIB_FOLDER:=
 LDFLAGS:=
