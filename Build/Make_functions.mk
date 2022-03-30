@@ -48,5 +48,5 @@ define create_d
 	echo "\n" >> $@; \
 	echo '\t $$(create_d)' >> $@.2; \
 	cat $@.2 >> $@; \
-	#rm -f $@.$$$$ $@.2
+	rm -f $@.$$$$ $@.2
 endef

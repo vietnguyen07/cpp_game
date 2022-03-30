@@ -1,2 +1,0 @@
-human.o: ../Code/Src/Human/human.cpp ../Code/Hdr/human.h \
- ../Code/Hdr/common.h ../Code/Hdr/idSystem.h

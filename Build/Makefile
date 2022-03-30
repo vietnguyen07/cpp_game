@@ -9,19 +9,31 @@ linking: $(DEP_LST) $(OBJ_LST)
 	@echo "=================================";\
 	echo "linking....";\
 	echo "making bin to $(BIN_FOLDER)";\
-	$(info ${OBJ_LST})
 	$(LKER) $(LDFLAGS) -o $(BIN_FOLDER)/$(OUTPUT) $(OBJ_LST)
 
 make_dir:
+	@echo "making " $(DEP_FOLDER) $(OBJ_FOLDER) $(BIN_FOLDER)
 	@mkdir -p $(DEP_FOLDER) $(OBJ_FOLDER) $(BIN_FOLDER);
+	
+make_test: $(DEP_LST) $(OBJ_LST)
+	@echo "making test"
+	
+	@$(eval ob_files:=$(foreach obj_file, $(OBJ_LST),$(realpath $(obj_file))))
+	$(eval export LKER)
+	$(eval export ob_files)
+	$(eval export LDFLAGS)
+	$(eval export VPATH)
+	$(eval export INC_FOLDER)
+	@cd ../Tests;\
+	make
 
 clean:
 	@echo "cleaning deps...";\
-	rm -f $(DEP_FOLDER)/*;\
+	rm -fr $(DEP_FOLDER)/*;\
 	echo "cleaning objs...";\
-	rm -f $(OBJ_FOLDER)/*;\
+	rm -fr $(OBJ_FOLDER)/*;\
 	echo "cleaning bin...";\
-	rm -f $(BIN_FOLDER)/*;
+	rm -fr $(BIN_FOLDER)/*;
 
 
 $(DEP_LST):|make_dir
