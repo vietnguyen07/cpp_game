@@ -14,3 +14,7 @@ bin/%: $(TST_OBJ_DIR)/%.o
 	
 $(TST_OBJ_DIR)/%.o: test_dir/%.cpp 
 	g++ $<  -c -o $@ -I$(INC_FOLDER)
+	
+clean:
+	rm ./test_dir/*
+	rm ./test_obj_dir/*

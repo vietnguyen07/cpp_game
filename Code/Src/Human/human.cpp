@@ -109,3 +109,7 @@ void human::fuck(human &p_partner)
 		  << p_partner.name << endl;
 	}
 };
+
+unsigned long long human::get_id(){
+	return this->id;
+}
