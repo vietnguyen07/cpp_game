@@ -26,7 +26,7 @@ void human_male::fuck(human &p_partner)
 {
 	if (p_partner.get_gender() == this->get_gender())
 	{
-		cout << "are you gay??? no fuck for you";
+		cout << "hardware incompatible!!!";
 	}
 	else
 	{

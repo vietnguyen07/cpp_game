@@ -36,6 +36,7 @@ class human
 		virtual uint_32 get_level() final;
 		virtual human_gender get_gender() final;
 		virtual bool is_pregnant();
+		virtual unsigned long long get_id() final;
 
 		// Setters
 		virtual bool set_name(string p_name) final;
