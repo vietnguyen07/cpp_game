@@ -24,8 +24,10 @@ make_test: $(DEP_LST) $(OBJ_LST)
 	$(eval export LDFLAGS)
 	$(eval export VPATH)
 	$(eval export INC_FOLDER)
+	$(eval export CC)
+	$(eval export CFLAGS)
 	@cd ../Tests;\
-	make
+	make clean; make all
 
 clean:
 	@echo "cleaning deps...";\
