@@ -29,12 +29,13 @@ int main(void) {
   for (it = humanLst.begin(); it != humanLst.end(); it++) {
     (*it)->introduce();
     string local_name = (*it)->get_name();
-    human_map.insert(pair<string, human*>(local_name, *it));
+    human_map[local_name] = *it;
   }
 
   for (human_map_it = human_map.begin(); human_map_it != human_map.end();
        human_map_it++) {
-    std::cout << human_map_it->first << std::endl;
+    std::cout << (human_map_it->second)->get_name() << std::endl;
   }
+
   return 0;
 }

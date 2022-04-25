@@ -94,13 +94,19 @@
 		</Ork>
 	</Races>
 	<Environment>
-		<timeline>
-			<req id="sys_22">
-				each 2 seconds, 1 year pass 
+		<limitations>
+			<req id="sys_25">
+				environment support up to 4 billions creatures
 			</req>
+		</limitations>
+		<timeline>
 			<req id="sys_23">
 				time line start at year 0 
 			</req>
+			<req id="sys_26">
+				round-base, each time 1 year
+			</req>
+			
 		</timeline>
 		<ID_system>
 			<req id="sys_24">

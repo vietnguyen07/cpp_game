@@ -35,6 +35,9 @@
 			<req id="arc_13">
 			    Bio includes strength
 			</req>
+			<req id="arc_14">
+			    Bio includes ID
+			</req>
 		</Bio>
 		<Action>
 			<req id="arc_8">

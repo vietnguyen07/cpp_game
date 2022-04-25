@@ -12,10 +12,16 @@
 class idSystem
 {
   public:
-	idSystem();
+
 	~idSystem();
-	static unsigned long long currentID;
 	static unsigned long long getID();
+	static idSystem * getInstance();
+
+
+  private:
+	static idSystem * _instance;
+	static unsigned long long currentID;
+	idSystem();
 
 };
 
