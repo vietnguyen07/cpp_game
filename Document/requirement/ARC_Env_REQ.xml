@@ -1,0 +1,19 @@
+<ARCR>
+	<introduction>
+	 This is architecture requirements for environment design
+	</introduction>
+	<ID_system>
+		<req id="arc_env_1">
+			unique for the whole environment - singleton
+		</req>
+		<req id="arc_env_2">
+			provide API to be called by creature for ID
+		</req>
+		<req id="arc_env_3">
+			ID must be unique and in incremental order
+		</req>
+		<req id="arc_env_4">
+			Must support at least 4 billions creatures
+		</req>
+	</ID_system>
+</ARCR>

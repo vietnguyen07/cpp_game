@@ -13,8 +13,8 @@ bin/%: $(TST_OBJ_DIR)/%.o
 	$(LKER) $(LDFLAGS) -o $@ $^ $(SYS_OBJ)
 	
 $(TST_OBJ_DIR)/%.o: test_dir/%.cpp 
-	g++ $<  -c -o $@ -I$(INC_FOLDER)
+	g++ -I$(INC_FOLDER) -g3 -ggdb -std=c++14    -c -o $@   $<
 	
 clean:
-	rm ./test_dir/*
-	rm ./test_obj_dir/*
+	rm ./bin/*;
+	rm ./test_obj_dir/*;
