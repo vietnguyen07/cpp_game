@@ -36,6 +36,8 @@ clean:
 	rm -fr $(OBJ_FOLDER)/*;\
 	echo "cleaning bin...";\
 	rm -fr $(BIN_FOLDER)/*;
+	@cd ../Tests;\
+	make clean
 
 
 $(DEP_LST):|make_dir
